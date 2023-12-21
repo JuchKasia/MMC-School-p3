@@ -12,5 +12,8 @@ body {
   font-family: "Comic Neue", cursive;
   background: radial-gradient(circle, rgb(43, 44, 46) 13%, rgb(25, 25, 25) 65%);
   width: 100%;
-  margin: 0 auto;
+}
+
+.cards {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

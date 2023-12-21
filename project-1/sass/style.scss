@@ -16,8 +16,12 @@ body {
     background: radial-gradient(circle, rgba(43, 44, 46, 1) 13%, rgba(25, 25, 25, 1) 65%);
 
     width: 100%;
-    margin: 0 auto;
+    // margin: 0 auto;
     // color: color.$white;
     // font-family: 'Montserrat', sans-serif;
     // background-color: color.$bg-color;
+}
+
+.cards {
+    display: flex;
 }
