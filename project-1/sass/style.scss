@@ -10,16 +10,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     height: 100vh;
     font-family: 'Comic Neue', cursive;
     background: radial-gradient(circle, rgba(43, 44, 46, 1) 13%, rgba(25, 25, 25, 1) 65%);
-
     width: 100%;
-    // margin: 0 auto;
-    // color: color.$white;
-    // font-family: 'Montserrat', sans-serif;
-    // background-color: color.$bg-color;
 }
 
 .cards {
@@ -56,7 +50,16 @@ body {
     border: none;
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0);
-    cursor: crosshair;
+    cursor: pointer;
+    z-index: 10;
+    // border: 2px solid red;
+    i {
+        font-size: 20px;
+    }
+}
+
+.btn-card:hover ~ .text {
+    clip-path: circle(120% at 50% 90%);
 }
 
 .text {
@@ -72,8 +75,16 @@ body {
     padding: 80px 30px;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.85);
+    clip-path: circle(0 at 50% 90%);
+    transition: clip-path 0.8s;
     // transform: translateX(-50%);
     .card-title {
-        
+        font-size: 34px;
+        color: #ddd;
+    }
+    .card-subtitle {
+        margin-bottom: 30px;
+        font-size: 30px;
+        color: #d8ae47;
     }
 }

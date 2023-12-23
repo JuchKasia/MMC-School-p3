@@ -48,7 +48,16 @@ body {
   border: none;
   color: #fff;
   text-shadow: 2px 2px 5px rgb(0, 0, 0);
-  cursor: crosshair;
+  cursor: pointer;
+  z-index: 10;
+}
+.btn-card i {
+  font-size: 20px;
+}
+
+.btn-card:hover ~ .text {
+  -webkit-clip-path: circle(120% at 50% 90%);
+          clip-path: circle(120% at 50% 90%);
 }
 
 .text {
@@ -63,4 +72,18 @@ body {
   padding: 80px 30px;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.85);
+  -webkit-clip-path: circle(0 at 50% 90%);
+          clip-path: circle(0 at 50% 90%);
+  transition: -webkit-clip-path 0.8s;
+  transition: clip-path 0.8s;
+  transition: clip-path 0.8s, -webkit-clip-path 0.8s;
+}
+.text .card-title {
+  font-size: 34px;
+  color: #ddd;
+}
+.text .card-subtitle {
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #d8ae47;
 }/*# sourceMappingURL=style.css.map */
