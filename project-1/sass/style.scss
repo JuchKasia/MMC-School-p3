@@ -9,9 +9,11 @@
 body {
     display: flex;
     flex-direction: column;
+    // margin:  0 auto;
+    // padding: 0px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    // height: 100vh;
     font-family: 'Comic Neue', cursive;
     background: radial-gradient(circle, rgba(43, 44, 46, 1) 13%, rgba(25, 25, 25, 1) 65%);
     width: 100%;
@@ -20,8 +22,12 @@ body {
 
 // project 1
 .container-project-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 40px 0px;
     margin: 40px 10px;
-    border: 2px solid red;
+    // border: 2px solid red;
 }
 .cards {
     display: flex;
@@ -100,7 +106,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 40px 0px;
-    border: 2px solid red;
+    // border: 2px solid red;
     .card {
         position: relative;
         margin: 20px 80px;

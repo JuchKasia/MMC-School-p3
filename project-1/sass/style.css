@@ -9,15 +9,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-family: "Comic Neue", cursive;
   background: radial-gradient(circle, rgb(43, 44, 46) 13%, rgb(25, 25, 25) 65%);
   width: 100%;
 }
 
 .container-project-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 40px 10px;
-  border: 2px solid red;
 }
 
 .cards {
@@ -94,7 +95,6 @@ body {
   justify-content: center;
   align-items: center;
   margin: 40px 0px;
-  border: 2px solid red;
 }
 .container-project-2 .card {
   position: relative;
