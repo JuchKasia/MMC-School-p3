@@ -166,4 +166,45 @@ body {
         transform: rotateY(-180deg);
         // opacity: 0;
     }
+    .card:hover .three {
+        animation: up 0.8s;
+        // transform: rotateY(-180deg);
+        // opacity: 0;
+    }
+    .card:hover .text {
+        animation: down 0.8s;
+        // transform: rotateY(-180deg);
+        // opacity: 0;
+    }
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-60%); // obraz podjeżdża do góry
+    }
+    80% {
+       opacity: 1;
+    }
+    100% {
+        opacity: 0; // z dwoma opacity mamy effect zanikania 
+     }
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(0);
+        z-index: -1;
+    }
+    50% {
+        transform: translateY(60%); // obraz podjeżdża do góry
+        z-index: -1;
+    }
+    100% {
+        z-index: 1;
+        // z-index-y  effect przetasowania 
+     }
+
 }
