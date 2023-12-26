@@ -6,6 +6,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -14,12 +15,16 @@ body {
   width: 100%;
 }
 
+.container-project-1 {
+  margin: 40px 10px;
+  border: 2px solid red;
+}
+
 .cards {
   display: flex;
   width: 1000px;
 }
-
-.card {
+.cards .card {
   position: relative;
   margin: 10px;
   height: 800px;
@@ -30,16 +35,7 @@ body {
   border-radius: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
 }
-
-.one {
-  background-image: url("../assets/img/portrait-woman_640.jpg");
-}
-
-.two {
-  background-image: url("../assets/img//man-640.jpg");
-}
-
-.btn-card {
+.cards .card .btn-card {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -51,16 +47,10 @@ body {
   cursor: pointer;
   z-index: 10;
 }
-.btn-card i {
+.cards .card .btn-card i {
   font-size: 20px;
 }
-
-.btn-card:hover ~ .text {
-  -webkit-clip-path: circle(120% at 50% 90%);
-          clip-path: circle(120% at 50% 90%);
-}
-
-.text {
+.cards .card .text {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -78,12 +68,89 @@ body {
   transition: clip-path 0.8s;
   transition: clip-path 0.8s, -webkit-clip-path 0.8s;
 }
-.text .card-title {
+.cards .card .text .card-title {
   font-size: 34px;
   color: #ddd;
 }
-.text .card-subtitle {
+.cards .card .text .card-subtitle {
   margin-bottom: 30px;
   font-size: 30px;
   color: #d8ae47;
+}
+.cards .one {
+  background-image: url("../assets/img/portrait-woman_640.jpg");
+}
+.cards .two {
+  background-image: url("../assets/img/man-640.jpg");
+}
+
+.btn-card:hover ~ .text {
+  -webkit-clip-path: circle(120% at 50% 90%);
+          clip-path: circle(120% at 50% 90%);
+}
+
+.container-project-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+  border: 2px solid red;
+}
+.container-project-2 .card {
+  position: relative;
+  margin: 20px 80px;
+  width: 400px;
+  height: 700px;
+  cursor: pointer;
+  perspective: 800px;
+}
+.container-project-2 .card .img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  transition: 0.8s;
+}
+.container-project-2 .card .one {
+  background-image: url("../assets/img/architecture-640.jpg");
+}
+.container-project-2 .card .two {
+  background-image: url("../assets/img/good-640.jpg");
+}
+.container-project-2 .card .three {
+  background-image: url("../assets/img/rain-640.jpg");
+}
+.container-project-2 .card .text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.8s;
+  opacity: 0;
+  background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
+}
+.container-project-2 .card .text .card-title {
+  margin-top: 450px;
+  margin-bottom: 20px;
+}
+.container-project-2 .card .text-one {
+  transform: rotateX(-180deg);
+}
+.container-project-2 .card .text-two {
+  transform: rotateY(-180deg);
+}
+.container-project-2 .card:hover .text {
+  transform: rotate(0);
+  opacity: 1;
+}
+.container-project-2 .card:hover .one {
+  transform: rotateX(180deg);
+}
+.container-project-2 .card:hover .two {
+  transform: rotateY(-180deg);
 }/*# sourceMappingURL=style.css.map */
