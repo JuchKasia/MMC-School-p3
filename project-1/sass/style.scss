@@ -6,6 +6,14 @@
     padding: 0;
 }
 
+// html {
+//     scroll-behavior: smooth; 
+// }
+
+// .scroll {
+//     overflow: hidden;
+// }
+
 body {
     display: flex;
     flex-direction: column;
@@ -17,7 +25,6 @@ body {
     font-family: 'Comic Neue', cursive;
     background: radial-gradient(circle, rgba(43, 44, 46, 1) 13%, rgba(25, 25, 25, 1) 65%);
     width: 100%;
-    overflow: hidden;
 }
 
 
@@ -217,8 +224,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    // margin: 40px 0px;
-    border: 2px solid red;
+    margin: 40px 0px;
+    // border: 2px solid red;
     .card {
         position: relative;
         // margin: 20px 80px;
@@ -236,5 +243,28 @@ body {
             background-position: center;
             
         }
+        .girl-img {
+            position: absolute;
+            // top: 80px;
+            right: 0;
+            bottom: -400px;
+            width: 500px;
+            // z-index: 1;
+            animation: move 3s forwards;
+        }
     }
+}
+
+@keyframes move {
+    0% { 
+        opacity: 0;
+    }
+    50% { 
+        opacity: 1; // dziewczyna się pojawia
+        bottom: 0;
+    }
+    100% { 
+        bottom: 0;
+    }
+
 }

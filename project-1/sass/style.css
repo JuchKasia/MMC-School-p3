@@ -12,7 +12,6 @@ body {
   font-family: "Comic Neue", cursive;
   background: radial-gradient(circle, rgb(43, 44, 46) 13%, rgb(25, 25, 25) 65%);
   width: 100%;
-  overflow: hidden;
 }
 
 .container-project-1 {
@@ -194,7 +193,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  margin: 40px 0px;
 }
 .container-project-3 .card {
   position: relative;
@@ -209,4 +208,24 @@ body {
   background-image: url("/project-1/assets/img/project-3/nature-winter_-1920.jpg");
   background-size: cover;
   background-position: center;
+}
+.container-project-3 .card .girl-img {
+  position: absolute;
+  right: 0;
+  bottom: -400px;
+  width: 500px;
+  animation: move 3s forwards;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    bottom: 0;
+  }
+  100% {
+    bottom: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
