@@ -253,6 +253,25 @@ body {
 .container-project-3 .card .text-content span:nth-child(8) {
   animation-delay: 2.2s;
 }
+.container-project-3 .card .text {
+  position: absolute;
+  top: 111px;
+  left: 100px;
+  width: 260px;
+  height: 80px;
+  font-size: 36px;
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+  overflow: hidden;
+}
+.container-project-3 .card .text::before {
+  display: block;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  content: "01/01/2023";
+  animation: slide-text 1s 3s forwards;
+}
 
 @keyframes move {
   0% {
@@ -284,5 +303,13 @@ body {
     transform: rotateY(0);
     filter: blur(0);
     opacity: 1;
+  }
+}
+@keyframes slide-text {
+  from {
+    top: -60px;
+  }
+  to {
+    top: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
