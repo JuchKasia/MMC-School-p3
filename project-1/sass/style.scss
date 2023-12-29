@@ -395,3 +395,34 @@ body {
         transition: .3s;
     }
 }
+
+// Do klasy .one::after trzeba dodać transition: transform .3s;
+// Wtedy kreska nie będzie tak dziwnie skakała. 👍
+
+
+
+// Warto też dodać, że z jakiegoś powodu u mnie na nagraniu działa odwrócony transform-origin. 
+// Także tam, gdzie ja na nagraniu mam left powinno być right i na odwrót. 🙂
+
+// Poprawię ten odcinek, kiedy skończę aktualizować starsze kursy.
+
+// first link
+.one::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transition: transform .3s;
+    transform: scaleX(0);
+    transform-origin: right;
+
+}
+
+.one:hover::after {
+    transform: scaleX(1); // kreska pojawia się od środka w boki
+    // jeśłi pisać bez transform-origin: left;
+    transform-origin: left;
+}
