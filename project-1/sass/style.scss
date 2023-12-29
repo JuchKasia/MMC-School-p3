@@ -28,7 +28,7 @@ body {
 }
 
 .section-title {
-    margin: 40px 0;
+    margin: 40px;
     padding: 20px;
     text-align: center;
     font-size: 32px;
@@ -41,8 +41,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    // margin: 40px 0px;
-    margin: 40px 10px;
     // border: 2px solid red;
 }
 .cards {
@@ -367,5 +365,33 @@ body {
     }
     to {
         top: 10px;
+    }
+}
+
+// section links
+.container-links {
+    display: flex;
+    margin-bottom: 40px;
+    padding: 80px 140px;
+    // height: 80px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #222;
+    box-shadow: 0 0 15px rgba(0, 140, 255, 0.6);
+    // border: 2px solid red;
+    .link {
+        position: relative;
+        padding: 10px 20px;
+        font-size: 40px;
+        color: rgb(0, 140, 255);
+        text-decoration: none;
+        transition: .3s;
+    }
+    .link::before {
+        transition: .3s;
+    }
+    .link::after {
+        transition: .3s;
     }
 }

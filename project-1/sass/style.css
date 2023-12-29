@@ -23,7 +23,7 @@ body {
 }
 
 .section-title {
-  margin: 40px 0;
+  margin: 40px;
   padding: 20px;
   text-align: center;
   font-size: 32px;
@@ -34,7 +34,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 10px;
 }
 
 .cards {
@@ -328,4 +327,28 @@ body {
   to {
     top: 10px;
   }
+}
+.container-links {
+  display: flex;
+  margin-bottom: 40px;
+  padding: 80px 140px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #222;
+  box-shadow: 0 0 15px rgba(0, 140, 255, 0.6);
+}
+.container-links .link {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 40px;
+  color: rgb(0, 140, 255);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.container-links .link::before {
+  transition: 0.3s;
+}
+.container-links .link::after {
+  transition: 0.3s;
 }/*# sourceMappingURL=style.css.map */
