@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll {
+  overflow: hidden;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -12,6 +20,14 @@ body {
   font-family: "Comic Neue", cursive;
   background: radial-gradient(circle, rgb(43, 44, 46) 13%, rgb(25, 25, 25) 65%);
   width: 100%;
+}
+
+.section-title {
+  margin: 40px 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 32px;
+  color: #fff;
 }
 
 .container-project-1 {
