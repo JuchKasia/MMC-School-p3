@@ -426,3 +426,43 @@ body {
     // jeśłi pisać bez transform-origin: left;
     transform-origin: left;
 }
+
+// second link 
+.two::before,
+.two::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    content: '';
+    // background-color: #fff;
+}
+
+.two::before {
+    top: -2px;
+    left: -5px;
+    border-top: 0 solid #fff; // pojawiają się kropki rogu
+    border-left: 0 solid #fff;
+}
+
+.two::after {
+    bottom: -2px;
+    right: -5px;
+    border-bottom: 0 solid #fff; // pojawiają się kropki rogu
+    border-right: 0 solid #fff;
+}
+
+.two:hover::before,
+.two:hover::after {
+    width: 50px;
+    height: 50%;
+}
+
+.two:hover::before {
+    border-top: 3px solid #fff; // pojawiają się kropki rogu, dzięki temu widać kontury animacji
+    border-left: 3px solid #fff
+}
+
+.two:hover::after {
+    border-bottom: 3px solid #fff; // pojawiają się kropki rogu,dzięki temu widać kontury animacji
+    border-right: 3px solid #fff;
+}
