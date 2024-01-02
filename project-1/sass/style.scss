@@ -137,7 +137,6 @@ main {
 }
 
 
-
 // project 2
 .container-project-2 {
     display: flex;
@@ -656,6 +655,13 @@ main {
             height: 560px;
         }
     }
+    .container-project-3 {
+        .card {
+            margin: 20px 60px;;
+            width: 720px;
+            height: 360px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -675,7 +681,29 @@ main {
             height: 630px;
         }
     }
-
+    .container-project-3 {
+        .card {
+            margin: 20px 60px;
+            max-width: 720px;
+            width: 100%;
+            height: 360px;
+            .girl-img {
+                width: 400px;
+            }
+            .text-content {
+                top: 40px;
+                left: 30px;
+                span {
+                    font-size: 40px;
+                }
+            }
+            .text {
+                top: 90px;
+                left: 90px;
+                font-size: 30px;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -693,4 +721,28 @@ main {
             height: 560px;
         }
     }
+    .container-project-3 {
+        .card {
+            margin: 20px 50px;
+            max-width: 720px;
+            width: 100%;
+            height: 340px;
+            .girl-img {
+                width: 320px;
+            }
+            .text-content {
+                top: 40px;
+                left: 20px;
+                span {
+                    font-size: 36px;
+                }
+            }
+            .text {
+                top: 80px;
+                left: 60px;
+                font-size: 26px;
+            }
+        }
+    }
+
 }

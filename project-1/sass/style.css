@@ -563,6 +563,11 @@ main {
     width: 300px;
     height: 560px;
   }
+  .container-project-3 .card {
+    margin: 20px 60px;
+    width: 720px;
+    height: 360px;
+  }
 }
 @media (max-width: 768px) {
   .container-project-1 .cards .card {
@@ -577,6 +582,27 @@ main {
     width: 360px;
     height: 630px;
   }
+  .container-project-3 .card {
+    margin: 20px 60px;
+    max-width: 720px;
+    width: 100%;
+    height: 360px;
+  }
+  .container-project-3 .card .girl-img {
+    width: 400px;
+  }
+  .container-project-3 .card .text-content {
+    top: 40px;
+    left: 30px;
+  }
+  .container-project-3 .card .text-content span {
+    font-size: 40px;
+  }
+  .container-project-3 .card .text {
+    top: 90px;
+    left: 90px;
+    font-size: 30px;
+  }
 }
 @media (max-width: 576px) {
   .container-project-1 .cards .card {
@@ -586,5 +612,26 @@ main {
   .container-project-2 .card {
     width: 300px;
     height: 560px;
+  }
+  .container-project-3 .card {
+    margin: 20px 50px;
+    max-width: 720px;
+    width: 100%;
+    height: 340px;
+  }
+  .container-project-3 .card .girl-img {
+    width: 320px;
+  }
+  .container-project-3 .card .text-content {
+    top: 40px;
+    left: 20px;
+  }
+  .container-project-3 .card .text-content span {
+    font-size: 36px;
+  }
+  .container-project-3 .card .text {
+    top: 80px;
+    left: 60px;
+    font-size: 26px;
   }
 }/*# sourceMappingURL=style.css.map */
