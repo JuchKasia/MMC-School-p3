@@ -15,11 +15,29 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
   justify-content: center;
   align-items: center;
   font-family: "Comic Neue", cursive;
   background: radial-gradient(circle, rgb(43, 44, 46) 13%, rgb(25, 25, 25) 65%);
+}
+
+main {
   width: 100%;
+}
+
+.section {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid yellow;
 }
 
 .section-title {
@@ -32,17 +50,20 @@ body {
 
 .container-project-1 {
   display: flex;
+  padding: 20px 0;
   justify-content: center;
   align-items: center;
 }
 
 .cards {
   display: flex;
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
+  justify-content: space-around;
 }
 .cards .card {
   position: relative;
-  margin: 10px;
+  margin: 20px;
   height: 800px;
   width: 50%;
   text-align: center;
@@ -93,10 +114,10 @@ body {
   font-size: 30px;
   color: #d8ae47;
 }
-.cards .one {
+.cards .card-one {
   background-image: url("../assets/img/portrait-woman_1920.jpg");
 }
-.cards .two {
+.cards .card-two {
   background-image: url("../assets/img/man-1920.jpg");
 }
 
@@ -110,10 +131,11 @@ body {
   justify-content: center;
   align-items: center;
   margin: 40px 0px;
+  padding: 0 20px;
 }
 .container-project-2 .card {
   position: relative;
-  margin: 20px 80px;
+  margin: 20px;
   width: 400px;
   height: 700px;
   cursor: pointer;
@@ -330,9 +352,9 @@ body {
 }
 .container-links {
   display: flex;
-  margin-bottom: 40px;
-  padding: 80px 140px;
-  justify-content: center;
+  margin: 0 20px 40px 20px;
+  padding: 80px 40px;
+  justify-content: space-around;
   align-items: center;
   border-radius: 15px;
   background-color: #222;
@@ -518,5 +540,145 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+.container-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 2px solid red;
+}
+.container-buttons .button {
+  position: relative;
+  margin: 20px;
+  padding: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ddd;
+  background: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+.container-buttons .button::before,
+.container-buttons .vutton::after {
+  display: block;
+  position: absolute;
+  content: "";
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+@media (max-width: 1200px) {
+  .container-project-1 .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-project-1 .cards .card {
+    height: 800px;
+    width: 60%;
+    background-size: cover;
+  }
+}
+@media (max-width: 992px) {
+  .container-project-2 .card {
+    width: 300px;
+    height: 560px;
+  }
+  .container-project-3 .card {
+    margin: 20px 60px;
+    width: 720px;
+    height: 360px;
+  }
+  .container-links .link {
+    padding: 10px;
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+  .container-project-1 .cards .card {
+    height: 720px;
+    width: 70%;
+  }
+  .container-project-2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container-project-2 .card {
+    width: 360px;
+    height: 630px;
+  }
+  .container-project-3 .card {
+    margin: 20px 60px;
+    max-width: 720px;
+    width: 100%;
+    height: 360px;
+  }
+  .container-project-3 .card .girl-img {
+    width: 400px;
+  }
+  .container-project-3 .card .text-content {
+    top: 40px;
+    left: 30px;
+  }
+  .container-project-3 .card .text-content span {
+    font-size: 40px;
+  }
+  .container-project-3 .card .text {
+    top: 90px;
+    left: 90px;
+    font-size: 30px;
+  }
+  .container-links .link {
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 26px;
+  }
+}
+@media (max-width: 576px) {
+  .container-project-1 .cards .card {
+    height: 640px;
+    width: 80%;
+  }
+  .container-project-2 .card {
+    width: 300px;
+    height: 560px;
+  }
+  .container-project-3 .card {
+    margin: 20px 50px;
+    max-width: 720px;
+    width: 100%;
+    height: 340px;
+  }
+  .container-project-3 .card .girl-img {
+    width: 320px;
+  }
+  .container-project-3 .card .text-content {
+    top: 40px;
+    left: 20px;
+  }
+  .container-project-3 .card .text-content span {
+    font-size: 36px;
+  }
+  .container-project-3 .card .text {
+    top: 80px;
+    left: 60px;
+    font-size: 26px;
+  }
+  .container-links {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .container-links .link {
+    margin: 10px 5px;
+    padding: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
