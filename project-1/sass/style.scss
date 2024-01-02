@@ -144,10 +144,11 @@ main {
     justify-content: center;
     align-items: center;
     margin: 40px 0px;
+    padding: 0 20px;
     // border: 2px solid red;
     .card {
         position: relative;
-        margin: 20px 80px;
+        margin: 20px;
         width: 400px;
         height: 700px;
         cursor: pointer;
@@ -631,36 +632,65 @@ main {
 }
 
 @media (max-width: 1200px) {
-    .cards {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid blue;
+    .container-project-1 {
+        .cards {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid blue;
+            .card {
+                height: 800px;
+                width: 60%;
+                background-size: cover;
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .container-project-2 {
         .card {
-            height: 800px;
-            width: 60%;
-            background-size: cover;
+            width: 300px;
+            height: 560px;
         }
     }
 }
 
 @media (max-width: 768px) {
-    .cards {
+    .container-project-1 {
+        .cards {
+            .card {
+                height: 720px;
+                width: 70%;
+            }
+        }
+    }
+    .container-project-2 {
+        display: flex;
+        flex-wrap: wrap;
         .card {
-            height: 720px;
-            width: 70%;
-            // background-size: cover;
+            width: 360px;
+            height: 630px;
         }
     }
 
 }
 
 @media (max-width: 576px) {
-    .cards {
+    .container-project-1 {
+        .cards {
+            .card {
+                height: 640px;
+                width: 80%;
+            }
+        }
+    }
+    .container-project-2 {
         .card {
-            height: 640px;
-            width: 80%;
+            width: 300px;
+            height: 560px;
         }
     }
 }
