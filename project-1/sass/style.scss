@@ -25,7 +25,7 @@ body {
     // height: 100vh;
     font-family: 'Comic Neue', cursive;
     background: radial-gradient(circle, rgba(43, 44, 46, 1) 13%, rgba(25, 25, 25, 1) 65%);
-    border: 2px solid blue;
+    // border: 2px solid blue;
 }
 
 main {
@@ -36,7 +36,7 @@ main {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    border: 2px solid red;
+    // border: 2px solid red;
 }
 
 .container {
@@ -392,13 +392,13 @@ main {
     }
 }
 
+
 // section links
 .container-links {
     display: flex;
-    margin-bottom: 40px;
-    padding: 80px 140px;
-    // height: 80px;
-    justify-content: center;
+    margin: 0 20px 40px 20px;
+    padding: 80px 40px;
+    justify-content: space-around;
     align-items: center;
     border-radius: 15px;
     background-color: #222;
@@ -406,11 +406,13 @@ main {
     // border: 2px solid red;
     .link {
         position: relative;
+        // margin: 0 10px;
         padding: 10px 20px;
         font-size: 40px;
         color: rgb(0, 140, 255);
         text-decoration: none;
         transition: .3s;
+        // border: 1px solid pink;
     }
     .link::before {
         transition: .3s;
@@ -630,6 +632,46 @@ main {
     }
 }
 
+
+// section buttons
+.container-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 2px solid red;
+    .button {
+        position: relative;
+        margin: 20px;
+        padding: 30px;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #ddd;
+        background: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .3s;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        // span {
+
+        // }
+    }
+    .button::before,
+    .vutton::after {
+        display: block;
+        position: absolute;
+        content: '';
+        transition: all 0.5s;
+        z-index: -1;
+    }
+}
+
+
+
 @media (max-width: 1200px) {
     .container-project-1 {
         .cards {
@@ -637,7 +679,7 @@ main {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border: 2px solid blue;
+            // border: 2px solid blue;
             .card {
                 height: 800px;
                 width: 60%;
@@ -645,7 +687,6 @@ main {
             }
         }
     }
-    
 }
 
 @media (max-width: 992px) {
@@ -661,6 +702,12 @@ main {
             width: 720px;
             height: 360px;
         }
+    }
+    .container-links {
+        .link {
+            padding: 10px;
+            font-size: 32px;
+        } 
     }
 }
 
@@ -704,6 +751,13 @@ main {
             }
         }
     }
+    .container-links {
+        .link {
+            margin: 0 5px;
+            padding: 10px;
+            font-size: 26px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -744,5 +798,12 @@ main {
             }
         }
     }
-
+    .container-links {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .link {
+            margin: 10px 5px;
+            padding: 10px;
+        }
+    }
 }

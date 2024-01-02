@@ -21,7 +21,6 @@ body {
   align-items: center;
   font-family: "Comic Neue", cursive;
   background: radial-gradient(circle, rgb(43, 44, 46) 13%, rgb(25, 25, 25) 65%);
-  border: 2px solid blue;
 }
 
 main {
@@ -32,7 +31,6 @@ main {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  border: 2px solid red;
 }
 
 .container {
@@ -354,9 +352,9 @@ main {
 }
 .container-links {
   display: flex;
-  margin-bottom: 40px;
-  padding: 80px 140px;
-  justify-content: center;
+  margin: 0 20px 40px 20px;
+  padding: 80px 40px;
+  justify-content: space-around;
   align-items: center;
   border-radius: 15px;
   background-color: #222;
@@ -544,13 +542,45 @@ main {
     opacity: 1;
   }
 }
+.container-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 2px solid red;
+}
+.container-buttons .button {
+  position: relative;
+  margin: 20px;
+  padding: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ddd;
+  background: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+.container-buttons .button::before,
+.container-buttons .vutton::after {
+  display: block;
+  position: absolute;
+  content: "";
+  transition: all 0.5s;
+  z-index: -1;
+}
+
 @media (max-width: 1200px) {
   .container-project-1 .cards {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid blue;
   }
   .container-project-1 .cards .card {
     height: 800px;
@@ -567,6 +597,10 @@ main {
     margin: 20px 60px;
     width: 720px;
     height: 360px;
+  }
+  .container-links .link {
+    padding: 10px;
+    font-size: 32px;
   }
 }
 @media (max-width: 768px) {
@@ -603,6 +637,11 @@ main {
     left: 90px;
     font-size: 30px;
   }
+  .container-links .link {
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 26px;
+  }
 }
 @media (max-width: 576px) {
   .container-project-1 .cards .card {
@@ -633,5 +672,13 @@ main {
     top: 80px;
     left: 60px;
     font-size: 26px;
+  }
+  .container-links {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .container-links .link {
+    margin: 10px 5px;
+    padding: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
