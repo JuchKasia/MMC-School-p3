@@ -31,6 +31,7 @@ body {
 main {
     width: 100%;
 }
+
 .section {
     max-width: 1400px;
     width: 100%;
@@ -60,14 +61,15 @@ main {
     padding: 20px 0;
     justify-content: center;
     align-items: center;
-    border: 2px solid blue;
+    // border: 2px solid blue;
 }
 
 .cards {
     display: flex;
-    width: 1000px;
+    max-width: 1000px;
+    width: 100%;
     justify-content: space-around;
-    border: 2px solid blue;
+    // border: 2px solid blue;
     .card {
         position: relative;
         margin: 20px;
@@ -625,5 +627,40 @@ main {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid blue;
+        .card {
+            height: 800px;
+            width: 60%;
+            background-size: cover;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        .card {
+            height: 720px;
+            width: 70%;
+            // background-size: cover;
+        }
+    }
+
+}
+
+@media (max-width: 576px) {
+    .cards {
+        .card {
+            height: 640px;
+            width: 80%;
+        }
     }
 }
