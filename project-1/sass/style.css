@@ -15,11 +15,31 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
   justify-content: center;
   align-items: center;
   font-family: "Comic Neue", cursive;
   background: radial-gradient(circle, rgb(43, 44, 46) 13%, rgb(25, 25, 25) 65%);
+  border: 2px solid blue;
+}
+
+main {
   width: 100%;
+}
+
+.section {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid yellow;
 }
 
 .section-title {
@@ -32,17 +52,21 @@ body {
 
 .container-project-1 {
   display: flex;
+  padding: 20px 0;
   justify-content: center;
   align-items: center;
+  border: 2px solid blue;
 }
 
 .cards {
   display: flex;
   width: 1000px;
+  justify-content: space-around;
+  border: 2px solid blue;
 }
 .cards .card {
   position: relative;
-  margin: 10px;
+  margin: 20px;
   height: 800px;
   width: 50%;
   text-align: center;
@@ -93,10 +117,10 @@ body {
   font-size: 30px;
   color: #d8ae47;
 }
-.cards .one {
+.cards .card-one {
   background-image: url("../assets/img/portrait-woman_1920.jpg");
 }
-.cards .two {
+.cards .card-two {
   background-image: url("../assets/img/man-1920.jpg");
 }
 
