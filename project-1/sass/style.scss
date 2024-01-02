@@ -724,7 +724,31 @@ main {
 
 
 // button slice
+.slice::before,
+.slice::after {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 140, 255);
+}
 
+.slice::before { // góra
+    top: -50%;
+    left: -100%; //chowamy z lewej strony
+}
+
+.slice::after { // dół
+    bottom: -50%;
+    right: -100%; //chowamy z prawej strony
+ }
+
+ .slice:hover::before {
+    left: 0;
+ }
+
+ .slice:hover::after {
+    right: 0;
+ }
+ 
 @media (max-width: 1200px) {
     .container-project-1 {
         .cards {
