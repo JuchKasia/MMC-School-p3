@@ -654,23 +654,69 @@ main {
         border-radius: 10px;
         cursor: pointer;
         transition: .3s;
-        overflow: hidden;
+        overflow: hidden; // chowa pseudo elementy
         border: 1px solid #ddd;
-        // span {
-
-        // }
     }
-    .button::before,
-    .vutton::after {
+    button::before,
+    button::after {
         display: block;
         position: absolute;
         content: '';
         transition: all 0.5s;
         z-index: -1;
     }
+    .slide {
+        width: 180px;
+        height: 95px;
+    }
+    .slide::before { // górna linia
+        top: -10px;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid #ddd;
+    }
+    .slide::after { //lewa pionowa linia pojawi się kiedy left/ bottom zmieni się
+        top: 0;
+        left: -10px;
+        height: 100%;
+        border-left: 1px solid #ddd;
+    }
+    .slide:hover::before {
+        top: 200px;
+        transition-delay: 0.1s; // opóznienie
+    }
+    .slide:hover::after {
+        left: 200px;
+    }
+}
+
+.span1,
+.span2 {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
+.span1 {
+    left: 50%;
+    transition: 0.5s;
+}
+
+.span2 {
+    left: -50%;
+    transition: 0.5s 0.1s;
+}
+
+.slide:hover {
+    .span1 {
+        left: 150%;
+    }
+    
+    .span2 {
+        left: 50%;
+    }
+}
 
 @media (max-width: 1200px) {
     .container-project-1 {
