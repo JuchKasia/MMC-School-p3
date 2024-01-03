@@ -665,13 +665,50 @@ main {
         transition: all 0.5s;
         z-index: -1;
     }
-    .btn-border-none {
+    .btn-border-none { //btn without border
         border: none;
         transition: 0.5s;
     }
     .btn-border-none:hover {
        box-shadow: 2px 3px 0 0 rgba(0, 140, 255, 0.8), 
        inset 11px 6px 10px rgba(0, 0, 0.2);
+    }
+    .border { //btn boroder
+        border-radius: 0;
+        overflow: visible;
+        transition: 0.8s;
+    }
+    .border::before,
+    .border::after {
+        width: 100%;
+        height: 100%;
+    }
+    .border::before {
+        top: 0;
+        left: 0; //linia na górze
+    
+        // border-top: 2px solid green;
+    }
+    .border::after {
+        bottom: 0;
+        right: 0; //linia na górze
+        // border-top: 5px solid green;
+    }
+    .border:hover {
+        color: rgb(0, 140, 255);
+        border: 1px solid transparent; //border zanika oraz btns obok nie zmieniaja swojego położenia
+    }
+    .border:hover::before {
+        top: -10px;
+        left: -10px;
+        border-top: 5px solid rgb(0, 140, 255);
+        border-left: 5px solid rgb(0, 140, 255); //praway orazdolny border się odsuwa w dół od elementów
+    }
+    .border:hover::after {
+        bottom: -10px;
+        right: -10px;
+        border-bottom: 5px solid rgb(0, 140, 255);
+        border-right: 5px solid rgb(0, 140, 255); //praway orazdolny border się odsuwa w dół od elementów
     }
 }
 
@@ -736,7 +773,7 @@ main {
 .slice::after {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 140, 255);
+    background-color: rgb(0, 140, 255);
 }
 
 .slice::before { // góra
@@ -756,7 +793,6 @@ main {
  .slice:hover::after {
     right: 0;
  }
-
 
 
 
