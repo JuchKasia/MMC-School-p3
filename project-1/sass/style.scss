@@ -807,6 +807,10 @@ main {
 
 
 // section MENU
+.section-menu {
+    height: 500px;
+}
+
 nav {
     margin-top: 100px;
     color: #ddd;
@@ -835,7 +839,6 @@ ul {
 .dropdown {
     position: absolute;
     width: 300px;
-
 }
 
 .dropdown li {
@@ -848,6 +851,95 @@ ul {
 .dropdown li:hover {
     color: #008cff;
 }
+
+.menu-item:hover .dropdown li {
+    display: block;
+    // opacity: 1;
+    animation: menu1 0.5s forwards;
+}
+
+.menu-item:hover .dropdown li:nth-child(2) {
+        animation-delay: .2s;
+}
+
+.menu-item:hover .dropdown li:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.menu-item:hover .dropdown li:nth-child(4) {
+    animation-delay: .6s;
+}
+
+.menu-item:hover .dropdown li:nth-child(5) {
+    animation-delay: .8s;
+}
+
+.menu-item:hover .dropdown li:nth-child(6) {
+    animation-delay: 1s;
+}
+
+
+// nav element 2
+.item-two:hover .dropdown li {
+    animation: menu2 0.5s forwards;
+}
+
+// nav element 3
+.item-three:hover .dropdown li {
+    animation: menu3 0.5s forwards;
+}
+
+// nav element 4
+.item-four:hover .dropdown li {
+    animation: menu4 0.5s forwards;
+    transform-origin: top;
+}
+
+
+@keyframes menu1 {
+    from {
+        opacity: 0;
+        transform: rotate(36deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+@keyframes menu2 {
+    from {
+        opacity: 0;
+        transform: rotateY(60deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+
+@keyframes menu3 {
+    from {
+        opacity: 0;
+        transform: rotateY(-60deg) rotateX(60deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0) rotateX(0);
+    }
+}
+
+@keyframes menu4 {
+    from {
+        opacity: 0;
+        transform: scale(0.8) rotateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotateY(0);
+    }
+}
+
 
 
 @media (max-width: 1200px) {
@@ -985,4 +1077,6 @@ ul {
         }
     }
 }
+
+
 
