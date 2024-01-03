@@ -43,7 +43,7 @@ main {
     max-width: 1140px;
     width: 100%;
     margin: 0 auto;
-    border: 2px solid yellow
+    // border: 2px solid yellow
 }
 
 .section-title {
@@ -642,7 +642,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    border: 2px solid red;
+    // border: 2px solid red;
     .button {
         position: relative;
         margin: 20px;
@@ -806,6 +806,48 @@ main {
  }
 
 
+// section MENU
+nav {
+    margin-top: 100px;
+    color: #ddd;
+    background-color: #292929;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    font-size: 24px;
+}
+
+.menu-item {
+    display: inline-block;
+    height: 100px;
+    width: 300px;
+    line-height: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #363636;
+}
+
+.dropdown {
+    position: absolute;
+    width: 300px;
+
+}
+
+.dropdown li {
+    display: none;
+    background-color: #50515A;
+    transition: color 0.3s;
+    opacity: 0; //chowamy wyjeżdżające  menu
+}
+
+.dropdown li:hover {
+    color: #008cff;
+}
 
 
 @media (max-width: 1200px) {
@@ -943,3 +985,4 @@ main {
         }
     }
 }
+
