@@ -654,21 +654,146 @@ main {
         border-radius: 10px;
         cursor: pointer;
         transition: .3s;
-        overflow: hidden;
+        overflow: hidden; // chowa pseudo elementy
         border: 1px solid #ddd;
-        // span {
-
-        // }
     }
-    .button::before,
-    .vutton::after {
+    button::before,
+    button::after {
         display: block;
         position: absolute;
         content: '';
         transition: all 0.5s;
         z-index: -1;
     }
+    .btn-border-none { //btn without border
+        border: none;
+        transition: 0.5s;
+    }
+    .btn-border-none:hover {
+       box-shadow: 2px 3px 0 0 rgba(0, 140, 255, 0.8), 
+       inset 11px 6px 10px rgba(0, 0, 0.2);
+    }
+    .border { //btn boroder
+        border-radius: 0;
+        overflow: visible;
+        transition: 0.8s;
+    }
+    .border::before,
+    .border::after {
+        width: 100%;
+        height: 100%;
+    }
+    .border::before {
+        top: 0;
+        left: 0; //linia na górze
+    
+        // border-top: 2px solid green;
+    }
+    .border::after {
+        bottom: 0;
+        right: 0; //linia na górze
+        // border-top: 5px solid green;
+    }
+    .border:hover {
+        color: rgb(0, 140, 255);
+        border: 1px solid transparent; //border zanika oraz btns obok nie zmieniaja swojego położenia
+    }
+    .border:hover::before {
+        top: -10px;
+        left: -10px;
+        border-top: 5px solid rgb(0, 140, 255);
+        border-left: 5px solid rgb(0, 140, 255); //praway orazdolny border się odsuwa w dół od elementów
+    }
+    .border:hover::after {
+        bottom: -10px;
+        right: -10px;
+        border-bottom: 5px solid rgb(0, 140, 255);
+        border-right: 5px solid rgb(0, 140, 255); //praway orazdolny border się odsuwa w dół od elementów
+    }
 }
+
+// button slide
+.slide {
+    width: 180px;
+    height: 95px;    
+}
+
+.slide::before { // górna linia
+    top: -10px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+}
+
+.slide::after { //lewa pionowa linia pojawi się kiedy left/ bottom zmieni się
+    top: 0;
+    left: -10px;
+    height: 100%;
+    border-left: 1px solid #ddd;
+}
+
+.slide:hover::before {
+    top: 200px;
+    transition-delay: 0.1s; // opóznienie
+}
+
+.slide:hover::after {
+    left: 200px;
+}
+
+.span1,
+.span2 {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.span1 {
+    left: 50%;
+    transition: 0.5s;
+}
+
+.span2 {
+    left: -50%;
+    transition: 0.5s 0.1s;
+}
+
+.slide:hover {
+    .span1 {
+        left: 150%;
+    }
+    .span2 {
+        left: 50%;
+    }
+}
+
+
+// button slice
+.slice::before,
+.slice::after {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 140, 255);
+}
+
+.slice::before { // góra
+    top: -50%;
+    left: -100%; //chowamy z lewej strony
+}
+
+.slice::after { // dół
+    bottom: -50%;
+    right: -100%; //chowamy z prawej strony
+ }
+
+ .slice:hover::before {
+    left: 0;
+ }
+
+ .slice:hover::after {
+    right: 0;
+ }
+
 
 
 
