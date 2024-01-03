@@ -615,6 +615,17 @@ main {
   border-bottom: 5px solid rgb(0, 140, 255);
   border-right: 5px solid rgb(0, 140, 255);
 }
+.container-buttons .glass::before {
+  top: -30px;
+  left: -150px;
+  height: 160%;
+  width: 100%;
+  background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  transform: rotate(20deg);
+}
+.container-buttons .glass:hover::before {
+  left: 150px;
+}
 
 .slide {
   width: 180px;
