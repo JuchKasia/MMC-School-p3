@@ -20,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Comic Neue", cursive;
-  background: radial-gradient(circle, rgb(43, 44, 46) 13%, rgb(25, 25, 25) 65%);
+  background-color: #333;
 }
 
 main {
@@ -857,6 +857,42 @@ ul {
 .tooltip-box .tooltip-right::before {
   content: "text tooltip right";
   left: 110%;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+input {
+  padding: 15px;
+  width: 400px;
+  color: #ddd;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: none;
+}
+
+label {
+  position: absolute;
+  padding: 0 10px;
+  top: 30%;
+  left: 2%;
+  font-size: 20px;
+  transition: transform 0.3s;
+  pointer-events: none;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid rgb(92, 92, 251);
+}
+
+input:focus ~ label {
+  transform: translateY(-100%);
+  color: rgb(92, 92, 251);
+  background-color: #333;
 }
 
 @media (max-width: 1200px) {
